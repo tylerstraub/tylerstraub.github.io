@@ -1,0 +1,80 @@
+body {
+    margin: 0px;
+    background-color: black;
+    font-family: 'VT323', serif;
+    overflow: hidden !important;
+}
+
+#giphy {
+    z-index: -999;
+    position: fixed; 
+    width: 100%; 
+    height: 100%;
+}
+
+#william {
+    z-index: 50;
+    margin: 0px;
+    position: absolute;
+    overflow: hidden;
+    height: 95%;
+    max-height: 400px;
+    opacity: 0.93;
+}
+
+.animate {
+-webkit-animation-name: cssAnimation;
+-webkit-animation-duration:0.4s;
+-webkit-animation-iteration-count: 1;
+-webkit-animation-timing-function: ease;
+-webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cssAnimation {
+from {
+background-color: deeppink;
+-webkit-transform: rotate(180deg) scale(1) skew(0deg) translate(0px);
+}
+to {
+background-color: transparent;
+-webkit-transform: rotate(0deg) scale(5) skew(0) translate(0px);
+}
+}
+
+#idContainer {
+    z-index: 100;
+    width:100%
+    overflow:hidden;
+    background-color:rgba(0,0,0,0.30);
+    color: #F0F0F0;
+    width: 100%;
+    margin: 0px;
+    position: absolute;
+    top: 0px;
+    font-size: 1.7em;
+}
+
+#bearstream {
+    z-index: 999;
+    position:absolute;
+    width: 100%;
+    bottom:0px;
+    margin: 0px;
+}
+
+.centerContainer {
+    margin: 0px;
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}

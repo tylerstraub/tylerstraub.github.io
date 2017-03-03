@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <title>SERIOUSBEARS</title>
+    
+    <!-- Meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333" />
+    
+    <!-- Favicon -->
+    <link rel="icon" sizes="192x192" href="/icon.png">
+
+    <!-- Manifest for Chrome Mobile App Mode -->
+    <link rel="manifest" href="/manifest.json">
+    
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/index.css">
+    
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baumans">
+    
+</head>
+
+<body>
+    
+    <!-- TOP NAVIGATION -->
+    <nav class="navbar navbar-inverse" style="background-color: #6441a4;">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button> <a class="navbar-brand" style="color:#D0D0D0;font-family: 'Baumans', serif;" href="#">SERIOUSBEARS</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"> <a class="nav-link" onclick="toggleChat()">SXSB</a> </li>
+                <li class="nav-item"> <a class="nav-link" onclick="toggleChat()">Chat</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="#">About</a> </li>
+                <li class="nav-item"> <a class="nav-link" href="https://twitch.streamlabs.com/seriousbears">Donate</a> </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- PRIMARY CONTAINER -->
+    <div class="container">
+        
+        <!-- OSO PLAYER -->
+        <div id="osoContainer" class="embed-responsive embed-responsive-16by9">
+            <iframe frameborder="0" scrolling="no" class="embed-responsive-item" src="/radio.html"></iframe>
+        </div>
+        
+        <!-- TWITCH CHAT -->
+        <div id="chatContainer" class="embed-responsive embed-responsive-16by9">
+            <iframe frameborder="0" scrolling="no" class="embed-responsive-item" src="http://www.twitch.tv/seriousbears/chat" height="720" width="1280"></iframe>
+        </div>
+        
+        <!-- TWITCH VIDEO -->
+        <!--
+        <div id="twitchContainer" class="embed-responsive embed-responsive-16by9">
+            <script src="http://player.twitch.tv/js/embed/v1.js"></script>
+            <div id="seriousbearsVideo"></div>
+            <script type="text/javascript">
+            var options = {
+                width: 1280,
+                height: 720,
+                channel: "seriousbears",
+            };
+
+            var twitchPlayer = new Twitch.Player("seriousbearsVideo", options);
+
+            twitchPlayer.addEventListener(Twitch.Player.ONLINE, () => {
+                console.log('DEBUG: Twitch Player became ONLINE!');
+            });
+            </script>
+        </div>
+        -->
+        
+        <!-- JUMBOTRON -->
+        <div id="SXSB2017" class="jumbotron">
+            <p class="lead">Broadcasting LIVE from an undisclosed location in Austin, TX, during the South By Southwest (SXSW) festival. We're streaming in support of NRDC, fighting climate change and preserving the wild.</p>
+            
+            <center>
+                <a href="https://www.nrdc.org/about" target="_blank"><img src="/nrdc-sm.png" alt="National Resources Defense Council" style="padding-top:15px;width:60%; max-width:380px"></a>
+            </center>
+            
+            <hr class="my-4">
+            
+            <p>All donations raised will go towards the NRDC. Between all the bears, we have enough streaming gear. We've only got one planet.</p>
+            
+            <br>
+                
+            <p class="lead"> <a class="btn btn-danger btn-lg" target="_blank" href="https://twitch.streamlabs.com/seriousbears" role="button">DONATE</a> </p>
+        </div>
+        
+    </div>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">SERIOUS BEARS RADIO ʕ•͡ᴥ•ʔ 2017</p>
+        </div>
+    </footer>
+    
+    <!-- INIT BOOTSTRAP4 SCRIPTS (jQuery first, then Tether, then Bootstrap JS...) -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+    <!-- INIT Custom JS (Loaded last for interaction with Twitch modules declared inline above) -->
+    <script src="seriousbears.js"></script>
+    
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    
+<title>OSO PLAYER ALPHA</title>
+
+<!-- INCLUDES -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=VT323">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.2/howler.core.min.js"></script>
+<link rel="stylesheet" href="/radio.css">
+
+<script>
+// load the bearhorns
+var bearhorn1 = new Howl({
+  src: ['/bearhorn1.mp3'],
+  preload: true
+});
+    
+var bearhorn2 = new Howl({
+  src: ['/bearhorn2.mp3'],
+  preload: true
+});
+    
+var bearhorn3 = new Howl({
+  src: ['/bearhorn3.mp3'],
+  preload: true
+});
+    
+var bearhorn4 = new Howl({
+  src: ['/bearhorn4.mp3'],
+  preload: true
+});
+
+// parse to an array
+var bearhorns = [bearhorn1, bearhorn1, bearhorn3, bearhorn4];
+
+// arm the bearhorn...
+function blowHorn(){
+    var whichHorn = Math.floor(Math.random() * 4);
+    var thisHorn = bearhorns[whichHorn];
+    thisHorn.play();
+    document.getElementById('william').classList.add("animate");
+    setTimeout(function(){ document.getElementById('william').classList.remove("animate"); }, 400);
+}
+
+// get the track ID
+function getTrackID(){
+    $.getJSON('http://listen.seriousbears.net/stats', function(data) {
+        console.log(data.icestats.source[0].title);
+        $("#nowplaying").replaceWith(data.icestats.source[0].title);
+    });
+}
+
+</script>
+    
+<body onclick="blowHorn()" onload="getTrackID()">
+    
+    <!-- BEARSTREAM -->
+    <audio id="bearstream" preload="none" controls>
+        <source src="http://listen.seriousbears.net/" type="audio/mpeg"> 
+    </audio>
+    
+    <!-- TRACK ID -->
+    <div id="idContainer"><b>NP: </b><span id="nowplaying">RETRIEVING TRACK ID...</span></div>
+
+    <!-- CENTER CONTAINER -->
+    <div class="centerContainer">  
+     <!-- WILLIAM -->
+    <img id="william" src="bear2.png" alt="WILLIAM">
+    </div>
+    
+    <!-- GIPHY -->
+    <iframe id="giphy" src="http://tv.giphy.com/bear" frameborder="0" scrolling="no"></iframe>
+    
+</body>
+
+<script>
+    // POLL THE STREAM API FOR NEW TRACKID EVERY 45 SECONDS..
+    window.setInterval(function(){
+    getTrackID();
+    console.log("polling for a new TrackID...");
+    }, 45000);    
+</script>
+    
+</html>
