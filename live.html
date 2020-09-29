@@ -1,0 +1,30 @@
+<html> 
+<head> 
+<meta charset = "utf-8"> 
+<script src = "https://cdn.jsdelivr.net/npm/hls.js@latest"> </script> 
+<script src = "https : //azotosolutions.com/play/dist/development/ovenplayer/ovenplayer.js "> </script> 
+</head> 
+<body> 
+<div id =" player "> </div> 
+<script>
+
+player = OvenPlayer.create ("player", {sources: [
+  {
+    "file": "https://video2.azotosolutions.com:1936/pescaratv/pescaratv/playlist.m3u8",
+    "type": "hls",
+    "label": "Radio Pescara"
+  },
+  {
+    "file": "https://video.azotosolutions.com:1936/radiotivuazzurralive/radiotivuazzurralive/playlist.m3u8",
+    "type": "hls",
+    "label": "Radio Azzurra TV"
+  },
+  {
+    "file": "https://5c389faa13be3.streamlock.net:9553/radiofmfalerialivetv/radiofmfalerialivetv/playlist.m3u8",
+    "type": "hls",
+    "label": "Radio Faleria FM"
+  }
+]});
+</script> 
+</body> 
+</html>
