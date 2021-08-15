@@ -2,31 +2,47 @@
 <html lang="en">
 
 <head>
-    
+
     <title>TYLER STRAUB</title>
-    
+
     <!-- Meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#333" />
-    
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+        integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
     <!-- Custom Fonts -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Baumans">
-	
-	<style>
-		body{
-			background-color: lawngreen;
-			font-family: 'Baumans', serif;
-		}
-	</style>
-	
+
+    <style>
+        body {
+            background-color: lawngreen;
+            font-family: 'Baumans', serif;
+        }
+    </style>
+
 </head>
 
-<body>
+<body onload="displayManager()">>
+
+    <script>
+        function displayManager() {
+
+            // DEBUGGING
+            alert('CURRENT HASH LOCATION IS: ' + window.location.hash);
+
+            // get the current hash location from the browser URI...
+            var hash_location = window.location.hash;
+
+        }
+    </script>
+
+    <h1 id="example_A" style="display:none">EXAMPLE CONTENT A</h1>
+    <h1 id="example_B" style="display:none">EXAMPLE CONTENT B</h1>
 
 </body>
 
