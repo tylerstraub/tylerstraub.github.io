@@ -33,20 +33,24 @@
         function displayManager() {
 
             // DEBUGGING
-            alert('CURRENT HASH LOCATION IS: ' + window.location.hash);
+            // alert('CURRENT HASH LOCATION IS: ' + window.location.hash);
 
             // get the current hash location from the browser URI...
             var hash_location = window.location.hash;
 
+            // display content A and hide content B
             if (hash_location == '#content_A') {
 
-                document.getElementById('content_A').style = 'block';
+                document.getElementById('content_A').style = 'display:block';
+                document.getElementById('content_B').style = 'display:none';
 
             }
 
+            // display content B and hide content A
             if (hash_location == '#content_B') {
 
-                document.getElementById('content_B').style = 'block';
+                document.getElementById('content_B').style = 'display:block';
+                document.getElementById('content_A').style = 'display:none';
 
             }
 
