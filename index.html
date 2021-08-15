@@ -38,11 +38,28 @@
             // get the current hash location from the browser URI...
             var hash_location = window.location.hash;
 
+            if (hash_location == '#content_A') {
+
+                document.getElementById('content_A').style = 'block';
+
+            }
+
+            if (hash_location == '#content_B') {
+
+                document.getElementById('content_B').style = 'block';
+
+            }
+
         }
     </script>
 
-    <h1 id="example_A" style="display:none">EXAMPLE CONTENT A</h1>
-    <h1 id="example_B" style="display:none">EXAMPLE CONTENT B</h1>
+    <div id="content_A" style="display:none">
+        <h1>EXAMPLE CONTENT A</h1>
+    </div>
+
+    <div id="content_B" style="display:none">
+        <h1>EXAMPLE CONTENT B</h1>
+    </div>
 
 </body>
 
