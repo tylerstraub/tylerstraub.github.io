@@ -27,56 +27,7 @@
 
 </head>
 
-<body onload='displayManager()' onhashchange='displayManager()'>
-
-    <script>
-        function displayManager() {
-
-            // DEBUGGING
-            // alert('CURRENT HASH LOCATION IS: ' + window.location.hash);
-            console.log('CURRENT HASH LOCATION IS: ' + window.location.hash);
-
-            // get the current hash location from the browser URI...
-            var hash_location = window.location.hash;
-
-            // when no hash location is provided.. hide everything
-            if (hash_location == '') {
-
-                document.getElementById('content_A').style = 'display:none';
-                document.getElementById('content_B').style = 'display:none';
-                return;
-
-            }
-
-            // display content A and hide content B
-            if (hash_location == '#content_A') {
-
-                document.getElementById('content_A').style = 'display:block';
-                document.getElementById('content_B').style = 'display:none';
-                return;
-
-            }
-
-            // display content B and hide content A
-            if (hash_location == '#content_B') {
-
-                document.getElementById('content_B').style = 'display:block';
-                document.getElementById('content_A').style = 'display:none';
-                return;
-
-            }
-
-        }
-    </script>
-
-    <div id="content_A" style="display:none">
-        <h1>EXAMPLE CONTENT A</h1>
-    </div>
-
-    <div id="content_B" style="display:none">
-        <h1>EXAMPLE CONTENT B</h1>
-    </div>
-
+<body>
 </body>
 
 </html>
